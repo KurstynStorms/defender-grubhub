@@ -1,0 +1,9 @@
+<% @restaurants.each do |restaurant| %>
+  <tr>
+	  <td><%= restaurant.name %></td>
+    <td><%= restaurant.description %></td>
+    <td><%= restaurant.city %></td>
+    <td><%= restaurant.star_rating %></td>
+    <td><%= restaurant.cuisine %></td>
+  </tr>
+<% end %>

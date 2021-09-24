@@ -11,7 +11,7 @@ RSpec.describe "restaurants/index", type: :view do
         cuisine: "Cuisine"
       ),
       Restaurant.create!(
-        name: "Name",
+        name: "Name2",
         description: "Description",
         city: "City",
         star_rating: 2,
@@ -22,7 +22,8 @@ RSpec.describe "restaurants/index", type: :view do
 
   it "renders a list of restaurants" do
     render
-    assert_select "tr>td", text: "Name".to_s, count: 2
+    assert_select "tr>td", text: "Name".to_s, count: 1
+    assert_select "tr>td", text: "Name2".to_s, count: 1
     assert_select "tr>td", text: "Description".to_s, count: 2
     assert_select "tr>td", text: "City".to_s, count: 2
     assert_select "tr>td", text: 2.to_s, count: 2
